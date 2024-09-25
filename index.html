@@ -32,6 +32,15 @@
 1840459406.mp3
 " type="audio/mp3"/>
 </audio>
+	<script>
+    window.onload = function() {
+        let audio = document.querySelector('.song-audio-autoplay');
+        audio.play().catch(error => {
+            // 自动播放失败的处理
+            console.log('Autoplay was prevented:', error);
+        });
+    };
+</script>
 <style type="text/css">
     .rotateImages{
         -webkit-animation:myRotate 10s linear infinite;
